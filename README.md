@@ -21,3 +21,8 @@ author: "Stephanie Hicks*, Michael I. Love*, and Tiffany Timbers*"
     - Example workflows
     - Afterlife as a publication
     - What is the currency in the community? In industry? In academia?
+ 
+ ## Workflows as Outreach
+ 
+* R-ladies 
+* Middle, high school students
