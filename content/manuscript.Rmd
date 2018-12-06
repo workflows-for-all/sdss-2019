@@ -1,0 +1,73 @@
+---
+title: Democratizing Data Science with Workflows
+author: "Stephanie C. Hicks, Michael I. Love, and Tiffany Timbers"
+date: December 6, 2018
+output: 
+    html_document:
+        theme: cosmo 
+        toc: true
+        toc_float: true
+        highlight: tango
+        number_sections: false
+fig_width: 5
+fig_height: 5
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, fig.align = "center", out.width = '70%')
+```
+
+# Abstract 
+
+Add abstract here. 
+
+# Introduction 
+
+## What do we mean by workflows? 
+
+* Add a clear description of what we mean by workflows
+
+## Why workflows? 
+
+* Workflows are transparent, therefore tend toward inclusion
+* Encourage learning by copy-and-change
+* Workflows can be forked and pull-request-ed: a living document
+
+# Workflows in Data Science 
+
+Here we describe how workflow can be used to democratize 
+data science, specificially in research, teaching, 
+publications and outreach. 
+
+## Workflows in Research
+
+## Workflows in Teachings
+
+## Workflows as Publications
+
+* *F1000Research* Bioconductor workflows as case study
+    - Technical aspect: Rmd to LaTeX, send to Overleaf
+    - Reviewing timeline and rules
+    - Example workflows
+    - Afterlife as a publication
+    - What is the currency in the community? In industry? In academia?
+ 
+## Workflows as Outreach
+
+Research has previously shown gender, racial and ethnic 
+miniority populations struggle to enter the field of data science
+due to a variety of reasons such cost of eduction, XXX, XXX, etc,
+[add citations]. Workflows can be used to counteract these 
+imbalances. 
+
+For example, workflows are commonly used in organizations with a goal 
+of improving gender imbalances in programming langauge communities,
+such as [R-ladies](https://rladies.org), XXX, and XXX (add more examples
+here). Workflows have also been used for youngers students, such as in
+middle school or high school, as a motivating tool to encourage them 
+to pursue degrees in data-driven related fields. 
+
+# Discussion
+
+# References
+

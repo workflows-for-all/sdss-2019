@@ -1,65 +1,22 @@
 ---
 title: "Democratizing Data Science with Workflows"
-author: "Stephanie Hicks*, Michael I. Love*, and Tiffany Timbers*"
+author: "Stephanie C. Hicks*, Michael I. Love*, and Tiffany Timbers*"
 ---
 
-# Democratizing Data Science with Workflows
+This repo contains a manuscript that we are writing to describe how 
+workflows can be used to democratize data science, such as in 
+research, teaching, publications and outreach. 
 
-* Workflows are transparent, therefore tend toward inclusion
-* Encourage learning by copy-and-change
-* Workflows can be forked and pull-request-ed: a living document
+We plan to present these ideas at SDSS 2019 (see [notes](notes.md)
+for the title and abstracts). 
 
-## Workflows in Research
+The manuscript is [content](/content) folder. 
 
-## Workflows in Teachings
+# Contact us
 
-## Workflows as Publications
+If you have questions, comments, or suggestions, please feel free to 
+reach out to us at 
 
-* *F1000Research* Bioconductor workflows as case study
-    - Technical aspect: Rmd to LaTeX, send to Overleaf
-    - Reviewing timeline and rules
-    - Example workflows
-    - Afterlife as a publication
-    - What is the currency in the community? In industry? In academia?
- 
- ## Workflows as Outreach
- 
-* R-ladies 
-* Middle, high school students
-
-# Notes 
-
-## SDSS 2019 title and abstracts 
-
-### Stephanie C. Hicks 
-
-#### Title 
-
-Useful tools to teach data science: workflows, case studies, GitHub Classroom, and Slack
-
-#### Abstract 
-
-An increase in demand for training in statistics and data science has led to an increase in computing, but this is not sufficient for teaching these topics. This talk will discuss a successful framework for teaching statistics and data science (described by Nolan and Speed in 1999) using in-depth workflows and case studies derived from interesting problems, with nontrivial solutions that leave room for different analyses. We will also discuss other useful tools for teaching data science, including GitHub Classroom and Slack. Finally, we discuss how these tools have been used to democratize data science to gender and ethnic minority populations that struggle to enter the field. 
-
-
-### Michael I. Love 
-
-#### Title 
-
-Publishing literate programming workflows in scientific journals
-
-#### Abstract 
-
-Literate programming workflows, in which the code used to perform the analysis is embedded within a manuscript or technical report (e.g. Rmarkdown, Sweave, Jupyter Notebooks, etc.), have gained recent attention with the availability of open source software facilitating the creation and publication of these documents, and journals interested in publishing such manuscripts. The idea of literate-programming-style workflows has been simmering for more than 30 years. We will discuss the publication of these type of workflows in scientific journals, how they are used to communicate scientific results and how they signal new types of scholarship.
-
-
-### Tiffany Timbers 
-
-#### Title 
-
-When should you add GitHub, Make and Docker to your data science workflow?
-
-#### Abstract 
-
-Without deliberate and conscious effort towards organization, tool choice, and process, complex and large data science projects can quickly grow out-of-hand and become irreproducible. This talk will discuss when and why one should add tools such as GitHub, Make and Docker to their data science workflow to mitigate chaos and maximize transparency, reproducibility, and productivity. 
-
+* [Stephanie C. Hicks](https://github.com/stephaniehicks)
+* [Michael I. Love](https://github.com/mikelove)
+* [Tiffany Timbers](https://github.com/ttimbers)
