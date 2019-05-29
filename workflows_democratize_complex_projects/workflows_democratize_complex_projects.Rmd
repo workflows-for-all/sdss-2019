@@ -1,0 +1,61 @@
+---
+title: "When Should You Add Github, Make and Docker to Your Data Science Workflow?"
+author: "Tiffany Timbers"
+institute: "University of British Columbia"
+date: "2019/05/28 (updated: `r Sys.Date()`)"
+output:
+  xaringan::moon_reader:
+    lib_dir: libs
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+---
+class: inverse, middle, center
+
+# Workflows democratize complex workflows
+
+---
+
+<img src="img/2011.11.15_life_of_a_swe.png">
+
+---
+
+# Workflow features to mitigate chaos
+
+1. Version Control
+
+2. Executable analysis scripts & pipelines
+
+3. Defined (and shippable) dependencies
+
+*these features are a subset of those recommended by Hilary Parker in her 2016 [Opinionated Analysis Development](https://peerj.com/preprints/3210/) paper
+
+---
+
+# Workflow features to mitigate chaos
+
+1. Version Control (*Git & GitHub*)
+
+2. Executable analysis scripts & pipelines (*Python/R scripts & Make*)
+
+3. Defined (and shippable) dependencies (*Docker*)
+
+*these features are a subset of those recommended by Hilary Parker in her 2016 [Opinionated Analysis Development](https://peerj.com/preprints/3210/) paper
+
+---
+
+# 1. Version Control 
+
+---
+
+# 2. Executable analysis scripts & pipelines
+
+---
+
+# 3. Defined (and shippable) dependencies
+
+---
+
+
+
