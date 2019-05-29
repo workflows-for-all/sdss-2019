@@ -1,6 +1,6 @@
 ---
 title: "When Should You Add Github, Make and Docker to Your Data Science Workflow?"
-author: "Tiffany Timbers"
+author: "Tiffany Timbers (@TiffanyTimbers)"
 institute: "University of British Columbia"
 date: "2019/05/28 (updated: `r Sys.Date()`)"
 output:
@@ -33,6 +33,12 @@ class: inverse, middle, center
 
 ---
 
+# Examples of Chaos in complex analyses
+
+(one slide per chaos example with funny Gif to pair)
+
+---
+
 # Workflow features to mitigate chaos
 
 1. Version Control (*Git & GitHub*)
@@ -47,15 +53,74 @@ class: inverse, middle, center
 
 # 1. Version Control 
 
+DEFINE
+
+---
+
+# Chaos Problem(s) mitigated by version control
+
+---
+
+# Version control contributes to democratization of Data Science
+
 ---
 
 # 2. Executable analysis scripts & pipelines
+
+DEFINE (particularly pipelines)
+
+---
+
+# Chaos Problem(s) mitigated by executable analysis scripts & pipelines
+
+---
+
+# Executable analysis scripts & pipelines contribute to democratization of Data Science
 
 ---
 
 # 3. Defined (and shippable) dependencies
 
+DEFINE HOW DEPENDENCIES CAN BE SHARED (Software and environment)
+
+---
+
+# Chaos Problem(s) mitigated by defined (and shippable) dependencies
+
+---
+
+# Defined (and shippable) dependencies contribute to democratization of Data Science
+
+---
+
+# Workflow features to mitigate chaos
+
+1. Version Control (*Git & GitHub*)
+
+2. Executable analysis scripts & pipelines (*Python/R scripts & Make*)
+
+3. Defined (and shippable) dependencies (*Docker*)
+
+*these features are a subset of those recommended by Hilary Parker in her 2016 [Opinionated Analysis Development](https://peerj.com/preprints/3210/) paper
+
 ---
 
 
+zen and accessibility GIF
+
+---
+
+# References
+
+- Hilary Parker in her 2016 [Opinionated Analysis Development](https://peerj.com/preprints/3210/) paper
+
+# 3. Defined (and shippable) dependencies
+
+---
+
+class: inverse, middle, center
+
+Questions?
+
+https://github.com/workflows-for-all/sdss-2019
 
