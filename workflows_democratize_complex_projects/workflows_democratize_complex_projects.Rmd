@@ -13,12 +13,39 @@ output:
 ---
 class: inverse, middle, center
 
-# Workflows democratize complex workflows
+# Data Science workflows that democratize complex projects
 
 ---
 
-<img src="img/2011.11.15_life_of_a_swe.png">
+# What do I mean by complex projects?
 
+I define complex projects as one that satifies at least one of the following criterias:
+
+--
+
+- two, or more, people directly working on the analysis
+
+--
+
+- projects that involve two or more coding documents
+
+--
+
+- projects that involve analysis of medium/large data 
+
+--
+
+- projects that have software or environment dependencies that are difficult or take a long time to install
+
+--
+
+- projects that utilize more than one programming language
+
+---
+class: center
+## Complex projects without intentional Data Science workflows...
+
+<img src ="https://upload.wikimedia.org/wikipedia/en/a/a3/Escher%27s_Relativity.jpg" width ="450">
 ---
 class: inverse, middle, center
 
@@ -121,6 +148,11 @@ DEFINE HOW DEPENDENCIES CAN BE SHARED (Software and environment)
 3. Defined (and shippable) dependencies (*Docker*)
 
 *these features are a subset of those recommended by Hilary Parker in her 2016 [Opinionated Analysis Development](https://peerj.com/preprints/3210/) paper
+
+---
+
+<img src="img/2011.11.15_life_of_a_swe.png">
+
 
 ---
 
