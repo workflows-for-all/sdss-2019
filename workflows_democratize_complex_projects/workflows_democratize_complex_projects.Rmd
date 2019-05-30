@@ -111,29 +111,55 @@ class: middle
 - Git + GitHub are two of the most common softwares for version control (*and so this is where I draw my examples from*)
 
 ---
-
-# Problem(s) mitigated by version control
+class: middle
+## Example problem solved by version control
 
 **Problem:** An extremely interesting result that you cannot recreate 😞
 
---
 
 **Solution**: Version the code **and** the output of the analysis 
 
 ----
---
+
+---
+
+PICTURE OF COMMIT HISTORY OF PROJECT AND NAVIGATION TO VIEW THAT VERSION
+
+---
+
+PICTURE OF RELEASE VIEW AND NAVIGATION TO VIEW THAT VERSION
+
+---
+class: middle
+## Example problem solved by version control
+
 
 **Problem:** Your email inbox is full of information related to the project that only you have access too
 
---
 
 **Solution**: Use GitHub Issues for communications related to the project
 
 ----
 
 ---
+class: middle, center
+### GitHub Issues for communications related to the project
+
+.pull-left[
+<img src="img/open_issues.png" >
+]
+
+.pull-right[
+<img src="img/closed_issues.png" >
+]
+
+source: https://github.com/LerouxLab/Celegans_wild_isolate_behaviour/issues
+---
 
 # Version control contributes to democratization of Data Science
+
+- Non-data science collaborators/team members know where to find the latest (or earlier) version of the analysis
+
 
 ---
 
