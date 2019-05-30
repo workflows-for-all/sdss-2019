@@ -172,15 +172,16 @@ DEFINE HOW DEPENDENCIES CAN BE SHARED (Software and environment)
 
 ---
 
-# Workflow features to mitigate chaos
+# When to add these workflow features:
 
-1. Version Control (*Git &amp; GitHub*)
+1. Version Control  
+ - **ALWAYS**
 
-2. Executable analysis scripts &amp; pipelines (*Python/R scripts &amp; Make*)
+2. Executable analysis scripts &amp; pipelines 
+ - **When you start hiding code chunks/cells in your Rmd/Jupter notebook**
 
-3. Defined (and shippable) dependencies (*Docker*)
-
-*these features are a subset of those recommended by Hilary Parker in her 2016 [Opinionated Analysis Development](https://peerj.com/preprints/3210/) paper
+3. Defined (and shippable) dependencies 
+ - **When doing remote computing or when you have tricky dependencies**
 
 ---
 
