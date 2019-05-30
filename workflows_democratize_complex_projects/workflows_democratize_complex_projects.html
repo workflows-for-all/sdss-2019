@@ -19,14 +19,15 @@ class: center, middle, inverse, title-slide
 ---
 
 class: inverse, middle, center
+## *or...*
 
 # Data Science workflows that democratize complex projects
 
 ---
 
-# What do I mean by complex projects?
+# What are complex projects?
 
-I define complex projects as one that satifies at least one of the following criterias:
+I define complex projects as one that satifies __*at least one*__ of the following criterias:
 
 --
 
@@ -42,11 +43,11 @@ I define complex projects as one that satifies at least one of the following cri
 
 --
 
-- projects that have software or environment dependencies that are difficult or take a long time to install
+- projects where you are working on a remote machine
 
 --
 
-- projects that utilize more than one programming language
+- projects that have many software or environment dependencies, or ones that are difficult or take a long time to install
 
 ---
 class: center
@@ -54,25 +55,21 @@ class: center
 
 &lt;img src ="https://upload.wikimedia.org/wikipedia/en/a/a3/Escher%27s_Relativity.jpg" width ="450"&gt;
 ---
+class: middle
+
+# Concrete examples of problems that can occur in complex analyses
+
+- An interesting result that you cannot recreate 😞
+
+- Your email inbox is full of information related to the project that only you have access too
+
+- Code that can only be run on one machine, *and you don't know why...*
+
+- Activation time to becoming productive after taking a break from the project is hours to days 
+
+---
 class: inverse, middle, center
-
-# Examples of chaos in complex analyses
-
----
-
-# An extremely interesting result that you cannot recreate
-
-
-
----
-
-# Code that can only be run on one machine
-
-*and you have no idea why...*
-
----
-
-# When returning to the project after a few months, it takes days to piece together the order in which the code should be run 
+# How can we avoid such problems and chaos?
 
 ---
 class: middle
@@ -84,8 +81,6 @@ class: middle
 2. Executable analysis scripts &amp; pipelines
 
 3. Defined (and shippable) dependencies
-
---
 
 *All of these features are a subset of those recommended by Hilary Parker in her 2016 [Opinionated Analysis Development](https://peerj.com/preprints/3210/) paper*
 
@@ -100,17 +95,48 @@ class: middle
 
 3. Defined (and shippable) dependencies (*Docker*)
 
-*these features are a subset of those recommended by Hilary Parker in her 2016 [Opinionated Analysis Development](https://peerj.com/preprints/3210/) paper
+*All of these features are a subset of those recommended by Hilary Parker in her 2016 [Opinionated Analysis Development](https://peerj.com/preprints/3210/) paper*
 
 ---
 
 # 1. Version Control 
 
-DEFINE
+- Version control is a tool which archives changes to file(s) over time. 
+
+- These changes are archived in a way that you can later revisit different time points in the project.
+
+&lt;img src="http://swcarpentry.github.io/git-novice/fig/play-changes.svg"&gt;
+
+*source: http://swcarpentry.github.io/git-novice/*
+
+--
+
+- Many version control tools also have features that facilitate collaboration.
+
+--
+
+- Git + GitHub are two of the most common softwares for version control (*and so this is where I draw my examples from*)
 
 ---
 
-# Chaos Problem(s) mitigated by version control
+# Problem(s) mitigated by version control
+
+**Problem:** An extremely interesting result that you cannot recreate 😞
+
+--
+
+**Solution**: Version the code **and** the output of the analysis 
+
+----
+--
+
+**Problem:** Your email inbox is full of information related to the project that only you have access too
+
+--
+
+**Solution**: Use GitHub Issues for communications related to the project
+
+----
 
 ---
 
