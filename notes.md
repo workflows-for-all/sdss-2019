@@ -37,7 +37,7 @@ An increase in demand for training in statistics and data science has led to an 
 
 #### Title 
 
-Publishing literate programming workflows in scientific journals
+[Publishing literate programming workflows in scientific journals](https://bit.ly/prog-lit-workflow)
 
 #### Abstract 
 
