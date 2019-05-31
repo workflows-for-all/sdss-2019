@@ -319,7 +319,7 @@ doc/count_report.md: doc/count_report.Rmd results/figure/isles.png results/figur
 
 ---
 
-Executable analysis scripts & pipelines contribute to democratization of Data Science
+## Executable analysis scripts & pipelines contribute to democratization of Data Science
 
 - Can be used by others to run/replicate the analysis
 
@@ -350,6 +350,8 @@ Dependencies include versions as well as names!
 **One possible solution:** Containerizing your software and environmental dependencies
 
 ----
+
+---
 
 ## What are containers?
 
@@ -386,7 +388,11 @@ For example:
 
 ---
 
-<img src="img/2011.11.15_life_of_a_swe.png">
+<img src="img/2011.11.15_life_of_a_swe.png.png">
+
+---
+
+<img src="img/imp_life_ds.png">
 
 
 ---
