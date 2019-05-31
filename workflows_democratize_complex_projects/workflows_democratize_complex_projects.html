@@ -96,7 +96,7 @@ class: middle
 
 2. Executable analysis scripts &amp; pipelines
 
-3. Defined (and shippable) dependencies
+3. Defined &amp; shippable dependencies
 
 *All of these features are a subset of those recommended by Hilary Parker in her 2016 [Opinionated Analysis Development](https://peerj.com/preprints/3210/) paper*
 
@@ -109,7 +109,7 @@ class: middle
 
 2. Executable analysis scripts &amp; pipelines (*Python/R scripts &amp; Make*)
 
-3. Defined (and shippable) dependencies (*Docker*)
+3. Defined &amp; shippable dependencies (*Docker*)
 
 *All of these features are a subset of those recommended by Hilary Parker in her 2016 [Opinionated Analysis Development](https://peerj.com/preprints/3210/) paper*
 
@@ -254,23 +254,26 @@ class: middle
 
 .pull-left[
 ### Code docs needed for analysis...
-```
-predict.py
 
-report.ipynb
 
-scrape_data.py
+- `predict.py`
 
-summarize.R
+- `report.ipynb`
 
-tidy_data.R
+- `scrape_data.py`
+
+- `summarize.R`
+
+- `tidy_data.R`
 ```
 ]
 
 
 .pull-right[
-### Script containing order and arguments needed to run analysis:
+### Instructions to run analysis:
 ```
+# runall.sh
+
 python scrape_data.py 2019-05-31 raw.csv
 
 Rscript tidy_data.R raw.csv clean.csv
@@ -296,11 +299,18 @@ class: middle
 
 ---
 
-class: middle
 
 ## Make - one possible smart dependency tree tool
 
-- `Make` has a special file called a Makefile that contains the recipe for your analysis
+--
+
+- special file called a Makefile that contains the recipe for your analysis
+
+--
+
+- Makefiles are "smart" and after changes, only run the parts of the analysis that has changed (as well as the parts that depend on the parts that changed)
+
+--
 
 - Each block of code in a Makefile is called a rule, it looks something like this:
 
@@ -309,9 +319,11 @@ file_to_create.png : data_it_depends_on.dat script_it_depends_on.py
 	python script_it_depends_on.py data_it_depends_on.dat file_to_create.png
 ```
 
+--
+
 - Makefiles are made of many rules, typically one rule for each time you run an analysis script
 
-- Makefiles are "smart" and after changes, only run the parts of the analysis that has changed (as well as the parts that depend on the parts that changed)
+--
 
 *Make is not the only smart dependency tree tool - `snakemake` &amp; Nextflow are also great options!*
 
@@ -343,12 +355,15 @@ doc/count_report.md: doc/count_report.Rmd results/figure/isles.png results/figur
 ```
 
 ---
+class: middle
 
 ## Makefile dependency tree
 
 &lt;img src="img/Makefile.png"&gt;
 
 ---
+class: middle
+
 
 ## Executable analysis scripts &amp; pipelines contribute to democratization of Data Science
 
@@ -360,7 +375,10 @@ doc/count_report.md: doc/count_report.Rmd results/figure/isles.png results/figur
 
 ---
 
-# 3. Defined (and shippable) dependencies
+class: middle
+
+
+# 3. Defined &amp; shippable dependencies
 
 Dependencies are things other people need to install to run your code, and include:
 - programming languages (e.g., R, Python, Julia, etc)
@@ -372,11 +390,14 @@ Dependencies include versions as well as names!
 
 ---
 
-# Example problem solved by defined (and shippable) dependencies
+class: middle
 
-**Problem 1:** Code that can only be run on one machine, *and you don't know why...* 😵
 
-**Problem 2:** Long install times when setting up a remote machine for analysis 🙄
+## Example problem solved by defined &amp; shippable dependencies
+
+**Problem:** Code that can only be run on one machine, *you don't know why...* 😵
+
+**Problem:** Long install times when setting up a remote machine for analysis 🙄
  
 **One possible solution:** Containerizing your software and environmental dependencies
 
@@ -387,22 +408,44 @@ Dependencies include versions as well as names!
 ## What are containers?
 
 - Containers are like a light-weight virtual machine, they allow you to:
-- ship Python/R versions
-- package versions
-- other tools you rely on (e.g., Make)
-- legacy code (e.g., perl scripts, fortran, etc)
+ - ship Python/R versions
+ - package versions
+ - other tools you rely on (e.g., Make)
+ - legacy code (e.g., perl scripts, fortran, etc)
 
 - The most popular tool for this is Docker
-- Containers can be shared on DockerHub (similar to how code can be shared on GitHub)
+- Containers can be shared on [DockerHub](https://hub.docker.com/) (similar to how code can be shared on GitHub)
+
+&lt;img src="https://cdn.itzgeek.com/wp-content/uploads/2016/07/Building-Docker-Images.png" width="700"&gt;
+
 ---
 
-# Defined (and shippable) dependencies contribute to democratization of Data Science
+&lt;img src="img/dockerfile.png" width="700"&gt;
+
+
+---
+
+&lt;img src="img/docker-hub-eg.png"&gt;
+
+---
+
+Instructions to run analysis:
+
+1. Install [Docker](https://docs.docker.com/v17.12/install/)
+
+2. Clone [this GitHub repository](https://github.com/ttimbers/data_analysis_pipeline_eg)
+
+3. From the root of the cloned repository, type: 
+
+```
+docker run --rm -v $(pwd):/home/rstudio/data_analysis_eg ttimbers/data_analysis_pipeline_eg make -C /home/rstudio/data_analysis_eg all
+```
+
+---
+
+# Defined &amp; shippable dependencies contribute to democratization of Data Science
 
 If you take care of packaging dependencies in a Docker container and distribute the container on DockerHub, you can add one line to your run instructions to your analysis to take away any installation pain your collaborators may face.
-
-For example:
-
-&lt;img src="img/example_instructions.png"&gt;
 
 ---
 
@@ -414,7 +457,7 @@ For example:
 2. Executable analysis scripts &amp; pipelines 
  - **When you start hiding code chunks/cells in your Rmd/Jupter notebook**
 
-3. Defined (and shippable) dependencies 
+3. Defined &amp; shippable dependencies 
  - **When doing remote computing or when you have tricky dependencies**
 
 ---
