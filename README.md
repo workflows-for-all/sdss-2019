@@ -15,7 +15,7 @@ The manuscript is [content](/content) folder.
 # Slides from SDSS 2019
 
 * Michael I. Love [[slides](https://bit.ly/lit-prog-workflow)]
-* Tiffany Timbers 
+* Tiffany Timbers [[slides](https://workflows-for-all.github.io/sdss-2019/workflows_democratize_complex_projects/workflows_democratize_complex_projects.html)]
 * Stephanie C. Hicks [[slides](https://speakerdeck.com/stephaniehicks/useful-tools-for-teaching-and-outreach-in-data-science)]
 
 # Contact us
