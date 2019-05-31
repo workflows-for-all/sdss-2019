@@ -162,6 +162,14 @@ class: middle
 
 ---
 
+## Going back in time via commits
+
+&lt;img src="img/commit-visit.png"&gt;
+
+
+---
+
+
 ## Going back in time via releases
 
 &lt;img src="img/releases.png"&gt;
@@ -171,6 +179,12 @@ class: middle
 ## Going back in time via releases
 
 &lt;img src="img/release_eg.png"&gt;
+
+---
+
+## Going back in time via releases
+
+&lt;img src="img/release-visit.png"&gt;
 
 ---
 
@@ -380,7 +394,7 @@ class: middle
 
 # 3. Defined &amp; shippable dependencies
 
-Dependencies are things other people need to install to run your code, and include:
+Dependencies are other things one need to install to run your code, and includes:
 - programming languages (e.g., R, Python, Julia, etc)
 - packages from programming languates (e.g., tidyverse, scikit-learn)
 - other tools you rely on (e.g., Make)
@@ -407,8 +421,8 @@ class: middle
 
 ## What are containers?
 
-- Containers are like a light-weight virtual machine, they allow you to:
- - ship Python/R versions
+- Containers are *like* a light-weight virtual machine, they allow you to share:
+ - Python/R versions
  - package versions
  - other tools you rely on (e.g., Make)
  - legacy code (e.g., perl scripts, fortran, etc)
@@ -429,25 +443,30 @@ class: middle
 
 ---
 
-Instructions to run analysis:
+## Instructions needed to run analysis on *almost* any machine:
 
-1. Install [Docker](https://docs.docker.com/v17.12/install/)
+1. Install [Docker](https://docs.docker.com/v17.12/install/) 
 
-2. Clone [this GitHub repository](https://github.com/ttimbers/data_analysis_pipeline_eg)
+2. Clone or download [this GitHub repository](https://github.com/ttimbers/data_analysis_pipeline_eg)
 
 3. From the root of the cloned repository, type: 
 
 ```
-docker run --rm -v $(pwd):/home/rstudio/data_analysis_eg ttimbers/data_analysis_pipeline_eg make -C /home/rstudio/data_analysis_eg all
+docker run --rm -v $(pwd):/home/rstudio/data_analysis_eg \
+ttimbers/data_analysis_pipeline_eg make -C /home/rstudio/data_analysis_eg all
 ```
 
 ---
 
-# Defined &amp; shippable dependencies contribute to democratization of Data Science
+class: middle
+
+## Defined &amp; shippable dependencies contribute to democratization of Data Science
 
 If you take care of packaging dependencies in a Docker container and distribute the container on DockerHub, you can add one line to your run instructions to your analysis to take away any installation pain your collaborators may face.
 
 ---
+
+class: middle
 
 # When to add these workflow features:
 
@@ -462,7 +481,7 @@ If you take care of packaging dependencies in a Docker container and distribute 
 
 ---
 
-&lt;img src="img/2011.11.15_life_of_a_swe.png.png"&gt;
+&lt;img src="img/2011.11.15_life_of_a_swe.png"&gt;
 
 ---
 
@@ -471,9 +490,17 @@ If you take care of packaging dependencies in a Docker container and distribute 
 
 ---
 
-# References
+## Acknowledgements
+
+- SDSS Organizing Committee
+- Mike Love &amp; Stephanie Hicks
+- Jenny Bryan
+
+## References
 
 - Hilary Parker in her 2016 [Opinionated Analysis Development](https://peerj.com/preprints/3210/) paper
+- [Software Carpentry Make lesson](https://swcarpentry.github.io/make-novice/)
+
 
 ---
 
