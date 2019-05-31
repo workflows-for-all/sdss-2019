@@ -125,13 +125,32 @@ class: middle
 
 ---
 
-PICTURE OF COMMIT HISTORY OF PROJECT AND NAVIGATION TO VIEW THAT VERSION
+## Going back in time via commits
+
+<img src="img/commits.png">
+
 
 ---
 
-PICTURE OF RELEASE VIEW AND NAVIGATION TO VIEW THAT VERSION
+## Going back in time via commits
+
+<img src="img/commits_eg.png">
+
 
 ---
+
+## Going back in time via releases
+
+<img src="img/releases.png">
+
+---
+
+## Going back in time via releases
+
+<img src="img/releases_eg.png">
+
+---
+
 class: middle
 ## Example problem solved by version control
 
@@ -312,15 +331,45 @@ Executable analysis scripts & pipelines contribute to democratization of Data Sc
 
 # 3. Defined (and shippable) dependencies
 
-DEFINE HOW DEPENDENCIES CAN BE SHARED (Software and environment)
+Dependencies are things other people need to install to run your code, and include:
+- programming languages (e.g., R, Python, Julia, etc)
+- packages from programming languates (e.g., tidyverse, scikit-learn)
+- other tools you rely on (e.g., Make)
+- legacy code (e.g., perl scripts, fortran, etc)
+
+Dependencies include versions as well as names!
 
 ---
 
-# Chaos Problem(s) mitigated by defined (and shippable) dependencies
+# Example problem solved by defined (and shippable) dependencies
 
+**Problem 1:** Code that can only be run on one machine, *and you don't know why...* 😵
+
+**Problem 2:** Long install times when setting up a remote machine for analysis 🙄
+ 
+**One possible solution:** Containerizing your software and environmental dependencies
+
+----
+
+## What are containers?
+
+- Containers are like a light-weight virtual machine, they allow you to:
+- ship Python/R versions
+- package versions
+- other tools you rely on (e.g., Make)
+- legacy code (e.g., perl scripts, fortran, etc)
+
+- The most popular tool for this is Docker
+- Containers can be shared on DockerHub (similar to how code can be shared on GitHub)
 ---
 
 # Defined (and shippable) dependencies contribute to democratization of Data Science
+
+If you take care of packaging dependencies in a Docker container and distribute the container on DockerHub, you can add one line to your run instructions to your analysis to take away any installation pain your collaborators may face.
+
+For example:
+
+<img src="img/example_instructions.png">
 
 ---
 
@@ -341,9 +390,9 @@ DEFINE HOW DEPENDENCIES CAN BE SHARED (Software and environment)
 
 
 ---
+class: center, middle
 
-
-zen and accessibility GIF
+<img src="https://media.giphy.com/media/1BdNuPkEURvkhYQ6vd/giphy.gif">
 
 ---
 
