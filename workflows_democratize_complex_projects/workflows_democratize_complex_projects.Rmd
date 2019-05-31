@@ -1,6 +1,6 @@
 ---
 title: "When Should You Add Github, Make and Docker to Your Data Science Workflow?"
-author: "Tiffany Timbers (@TiffanyTimbers)"
+author: "Tiffany Timbers @TiffanyTimbers"
 institute: "University of British Columbia"
 date: "2019/05/28 (updated: `r Sys.Date()`)"
 output:
@@ -12,7 +12,7 @@ output:
       countIncrementalSlides: false
 ---
 class: inverse, middle, center
-## *or...*
+## *and...*
 
 # Data Science workflows that democratize complex projects
 
@@ -54,11 +54,13 @@ class: middle
 
 - An interesting result that you cannot recreate 😞
 
-- Your email inbox is full of information related to the project that only you have access too
+- Your email inbox is full of information related to the project that only you have access too 😫
 
-- Code that can only be run on one machine, *and you don't know why...*
+- A small change to the analysis code requires re-running the entire thing, *and takes hours...* 😧
 
-- Activation time to becoming productive after taking a break from the project is hours to days 
+- Activation time to becoming productive after taking a break from the project is hours to days 😴
+
+- Code that can only be run on one machine, *and you don't know why...* 😵
 
 ---
 class: inverse, middle, center
@@ -134,7 +136,7 @@ class: middle
 ## Example problem solved by version control
 
 
-**Problem:** Your email inbox is full of information related to the project that only you have access too
+**Problem:** Your email inbox is full of information related to the project that only you have access too 😫
 
 
 **Solution**: Use GitHub Issues for communications related to the project
@@ -142,8 +144,22 @@ class: middle
 ----
 
 ---
+
 class: middle, center
-### GitHub Issues for communications related to the project
+## GitHub Issues for project-related communications
+
+<img src="img/issue_thread.png" >
+
+---
+
+class: middle, center
+## GitHub Issues for project-related communications
+
+<img src="img/inbox-notification.png" >
+
+---
+class: middle, center
+## GitHub Issues for project-related communications
 
 .pull-left[
 <img src="img/open_issues.png" >
@@ -154,26 +170,90 @@ class: middle, center
 ]
 
 source: https://github.com/LerouxLab/Celegans_wild_isolate_behaviour/issues
+
+
 ---
 
-# Version control contributes to democratization of Data Science
+class: middle
 
-- Non-data science collaborators/team members know where to find the latest (or earlier) version of the analysis
+## Version control contributes to democratization of Data Science
 
+- Non-data science collaborators/team members know where to find the latest (or earlier) version of the analysis (code and output)
+
+- All collaborators/team members have access to all communications associated with the analysis
 
 ---
 
 # 2. Executable analysis scripts & pipelines
 
-DEFINE (particularly pipelines)
+---
+class: middle
+## Example problem solved by executable analysis scripts & pipelines
+
+**Problem:** Activation time to becoming productive after taking a break from the project is hours to days 😴
+
+**Solution:** Record the order scripts need to be run in, and their arguments in one "driver" script/pipeline file.
+
+----
 
 ---
 
-# Chaos Problem(s) mitigated by executable analysis scripts & pipelines
+## Create a recipe for your analysis
+
+.pull-left[
+### Script and literate code docs needed for analysis...
+```
+predict.py
+
+report.ipynb
+
+scrape_data.py
+
+summarize.R
+
+tidy_data.R
+```
+]
+
+
+.pull-right[
+### Order and arguments needed to run analysis:
+```
+python scrape_data.py 2019-05-31 raw.csv
+
+Rscript tidy_data.R raw.csv clean.csv
+
+Rscript summarize.R clean.csv summ.svg
+
+python predict.py clean.csv predict.csv
+
+jupyter nbconvert --to pdf report.ipynb
+```
+]
+
+---
+class: middle
+## Example problem solved by executable analysis scripts & pipelines
+
+**Problem:** A small change to the analysis code requires re-running the entire thing, *and takes hours...* 😧
+
+**Solution:** Use a smart dependency tree tool to only re-run the parts that needs to be updated.
+
+----
 
 ---
 
-# Executable analysis scripts & pipelines contribute to democratization of Data Science
+# Ex---
+
+EXPLAIN A BIT ABOUT MAKE (AND RELATED TOOLS HERE)
+
+ecutable analysis scripts & pipelines contribute to democratization of Data Science
+
+- Can be used by others to run/replicate the analysis
+
+- Makes it easier to understand the landscape of the project and for others to contribute 
+
+- Reduces *some* of the challenges/frustrations of working with larger data sets
 
 ---
 
