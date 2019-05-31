@@ -20,7 +20,7 @@ class: inverse, middle, center
 
 # What are complex projects?
 
-I define complex projects as one that satifies __*at least one*__ of the following criterias:
+I define complex projects as one that has __*at least one*__ of the following:
 
 --
 
@@ -42,23 +42,37 @@ I define complex projects as one that satifies __*at least one*__ of the followi
 
 - projects that have many software or environment dependencies, or ones that are difficult or take a long time to install
 
+--
+
+*As a project accumulates more of these features it grows further in complexity.*
 ---
 class: center
 ## Complex projects without intentional Data Science workflows...
 
 <img src ="https://upload.wikimedia.org/wikipedia/en/a/a3/Escher%27s_Relativity.jpg" width ="450">
+
+-- *Relativity by Maurits Cornelis Escher*
 ---
-class: middle
 
 # Concrete examples of problems that can occur in complex analyses
 
+--
+
 - An interesting result that you cannot recreate 😞
+
+--
 
 - Your email inbox is full of information related to the project that only you have access too 😫
 
+--
+
 - A small change to the analysis code requires re-running the entire thing, *and takes hours...* 😧
 
+--
+
 - Activation time to becoming productive after taking a break from the project is hours to days 😴
+
+--
 
 - Code that can only be run on one machine, *and you don't know why...* 😵
 
@@ -104,13 +118,15 @@ class: middle
 
 *source: http://swcarpentry.github.io/git-novice/*
 
---
+---
+
+# 1. Version Control
 
 - Many version control tools also have features that facilitate collaboration.
 
---
-
 - Git + GitHub are two of the most common softwares for version control (*and so this is where I draw my examples from*)
+
+<img src="http://faisalweb.com/wp-content/uploads/2017/07/git.jpg" width="600">
 
 ---
 class: middle
@@ -147,7 +163,7 @@ class: middle
 
 ## Going back in time via releases
 
-<img src="img/releases_eg.png">
+<img src="img/release_eg.png">
 
 ---
 
@@ -197,7 +213,7 @@ class: middle
 
 ## Version control contributes to democratization of Data Science
 
-- Non-data science collaborators/team members know where to find the latest (or earlier) version of the analysis (code and output)
+- All collaborators/team members know where to find the latest (or earlier) version of the analysis (code and output)
 
 - All collaborators/team members have access to all communications associated with the analysis
 
@@ -205,8 +221,16 @@ class: middle
 
 # 2. Executable analysis scripts & pipelines
 
-<img src="img/stat540diffmethleuk.png">
-source: http://stat545.com/automation01_slides/index.html#/automating-data-analysis-pipelines
+- As analysis grows in length and complexity, one literate code document generally is not enough
+
+- To improve code report readability (and code reproducibility and modularity) it is better to abstract at least parts of the code away (e.g, to scripts)
+
+- These scripts save figures and tables that will be imported into the final report
+
+
+<img src="img/scripts.png">
+
+
 ---
 class: middle
 ## Example problem solved by executable analysis scripts & pipelines
@@ -394,11 +418,6 @@ For example:
 
 <img src="img/imp_life_ds.png">
 
-
----
-class: center, middle
-
-<img src="https://media.giphy.com/media/1BdNuPkEURvkhYQ6vd/giphy.gif">
 
 ---
 
