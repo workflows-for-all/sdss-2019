@@ -24,5 +24,5 @@ If you have questions, comments, or suggestions, please feel free to
 reach out to us at 
 
 * [Stephanie C. Hicks](https://github.com/stephaniehicks)
-* [Michael I. Love](https://github.com/mikelove)
+* [Michael I. Love](https://twitter.com/mikelove)
 * [Tiffany Timbers](https://github.com/ttimbers)
