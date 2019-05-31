@@ -193,6 +193,8 @@ class: middle
 
 # 2. Executable analysis scripts &amp; pipelines
 
+&lt;img src="img/stat540diffmethleuk.png"&gt;
+source: http://stat545.com/automation01_slides/index.html#/automating-data-analysis-pipelines
 ---
 class: middle
 ## Example problem solved by executable analysis scripts &amp; pipelines
@@ -208,7 +210,7 @@ class: middle
 ## Create a recipe for your analysis
 
 .pull-left[
-### Script and literate code docs needed for analysis...
+### Code docs needed for analysis...
 ```
 predict.py
 
@@ -224,7 +226,7 @@ tidy_data.R
 
 
 .pull-right[
-### Order and arguments needed to run analysis:
+### Script containing order and arguments needed to run analysis:
 ```
 python scrape_data.py 2019-05-31 raw.csv
 
@@ -240,6 +242,7 @@ jupyter nbconvert --to pdf report.ipynb
 
 ---
 class: middle
+
 ## Example problem solved by executable analysis scripts &amp; pipelines
 
 **Problem:** A small change to the analysis code requires re-running the entire thing, *and takes hours...* 😧
@@ -250,11 +253,61 @@ class: middle
 
 ---
 
-# Ex---
+class: middle
 
-EXPLAIN A BIT ABOUT MAKE (AND RELATED TOOLS HERE)
+## Make - one possible smart dependency tree tool
 
-ecutable analysis scripts &amp; pipelines contribute to democratization of Data Science
+- `Make` has a special file called a Makefile that contains the recipe for your analysis
+
+- Each block of code in a Makefile is called a rule, it looks something like this:
+
+```
+file_to_create.png : data_it_depends_on.dat script_it_depends_on.py
+	python script_it_depends_on.py data_it_depends_on.dat file_to_create.png
+```
+
+- Makefiles are made of many rules, typically one rule for each time you run an analysis script
+
+- Makefiles are "smart" and after changes, only run the parts of the analysis that has changed (as well as the parts that depend on the parts that changed)
+
+*Make is not the only smart dependency tree tool - `snakemake` &amp; Nextflow are also great options!*
+
+---
+
+## Makefile Structure
+
+Example Makefile:
+
+```
+# run all analysis
+all: doc/count_report.md
+
+# make dat files
+results/isles.dat: data/isles.txt src/wordcount.py
+	python src/wordcount.py data/isles.txt results/isles.dat
+results/abyss.dat: data/abyss.txt src/wordcount.py
+	python src/wordcount.py data/abyss.txt results/abyss.dat
+
+#create figures
+results/figure/isles.png: results/isles.dat src/plotcount.py
+	python src/plotcount.py results/isles.dat results/figure/isles.png
+results/figure/abyss.png: results/abyss.dat src/plotcount.py
+	python src/plotcount.py results/abyss.dat results/figure/abyss.png
+
+# render report
+doc/count_report.md: doc/count_report.Rmd results/figure/isles.png results/figure/abyss.png results/figure/last.png results/figure/sierra.png
+	Rscript -e "rmarkdown::render('doc/count_report.Rmd')"
+```
+
+---
+
+## Makefile dependency tree
+
+&lt;img src="img/Makefile.png"&gt;
+
+---
+
+Executable analysis scripts &amp; pipelines contribute to democratization of Data Science
 
 - Can be used by others to run/replicate the analysis
 
