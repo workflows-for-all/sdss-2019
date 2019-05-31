@@ -12,6 +12,12 @@ for the title and abstracts).
 
 The manuscript is [content](/content) folder. 
 
+# Slides from SDSS 2019
+
+* Michael I. Love
+* Tiffany Timbers
+* Stephanie C. Hicks [[slides](https://speakerdeck.com/stephaniehicks/useful-tools-for-teaching-and-outreach-in-data-science)]
+
 # Contact us
 
 If you have questions, comments, or suggestions, please feel free to 
